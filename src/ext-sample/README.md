@@ -13,12 +13,12 @@ A sampling circuit generator package embedded in [abc](https://github.com/berkel
 - **Commands Usage**  
   \[-h] option shows the detailed usage of each command
   1. **sampleCkt**  
-    Generate a sampling circuit with given PI and PO number.
+    - Generate a sampling circuit with given PI and PO number.
   2. **sampleCnt**  
-    Generate a sampling circuit with given PI number and connect it to the current network.  
+    - Generate a sampling circuit with given PI number and connect it to the current network.  
     - \[-c] option make the circuit size smaller after connection in our experiments.
   3. **sampleWit**  
-    Generate witnesses of the current network and dump the sampling circuits named by "wit<num>.aig".
+    - Generate witnesses of the current network and dump the sampling circuits named by "wit<num>.aig".
 
 - **Interface**    
   - SamplingCircuit.h
