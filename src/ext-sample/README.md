@@ -34,7 +34,7 @@ A sampling circuit generator package embedded in [abc](https://github.com/berkel
       connect to current network and return the new network
       
 # Example
-1. Generate sampling circuits under constraints    
+## Generate sampling circuits under constraints    
   Suppose there are 10 variables from v1 to v10, and we want to draw samples that meet the constraint (v1+v5).  
   Then we can use either DIMACS CNF or BLIF to represent the constraints like the following:
   - DIMACS CNF
@@ -60,4 +60,4 @@ A sampling circuit generator package embedded in [abc](https://github.com/berkel
   > read_cnf -i <cnf> or read <blif> # read constraints as a circuit
   > sampleWit -s 100                 # generate sampling circuits until contain at least 100 samples 
   ```
-  
+  If -v option is added after command "sampleWit", the program will print out the value of "loThresh", and each generated circuit contains "loThresh" number of samples. 
