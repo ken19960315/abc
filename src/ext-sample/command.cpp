@@ -204,7 +204,7 @@ int ReadCNF_Command( Abc_Frame_t * pAbc, int argc, char ** argv )
     {
         printf( "The AIG construction has failed.\n" );
         Abc_NtkDelete( pAig );
-        return NULL;
+        return 0;
     }
 	
     // replace the current network
@@ -524,7 +524,6 @@ int SampleWit_Command( Abc_Frame_t * pAbc, int argc, char ** argv )
    	char circuitname[10];
 	fstream file;
     Abc_Ntk_t * pNtk, * pCkt, * pNtkRes;
-    Abc_Obj_t * pObj;
 	vector<int*> vMinterm;
 	vector<int*> vSample;
 	vector<int*> vResult;
