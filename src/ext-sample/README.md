@@ -1,20 +1,26 @@
 # ext-sample
 A sampling circuit generator package embedded in [abc](https://github.com/berkeley-abc/abc).
+## Features
+- Generate sampling circuits to perform uniform sampling on given Boolean space.
+- Capabale to draws samples under certain constraints presented by DIMACS CNF or BLIF format.
+- Connect generated sampling circuits to a circuit to cast the computation from original domain to sampling domain.
 
 # Compile
 1. Put the entire "ext-sample" directory to the "src" directory under abc.
 2. type "make" command at the root directory of abc
 
 # Documentation
-- **command.cpp**  
-  Implement two commands for abc, and there is some usage of SampleCircuit class.
-  1. **sampleGen \[-i \<num>] \[-o \<num>]**  
-    Generate a sample circuit with specific PI and PO number in AIG format.
-  2. **sampleCnt \[-i \<num>]**  
-    Generate a sample circuit with specific PI number, and connect it to the current network. Notice that the current network should be strash.
+- **Commands Usage** 
+  \[-h] option shows the detailed usage of each command
+  1. **sampleCkt \[-i \<num>] \[-o \<num> / -c] \[-vh]**  
+    Generate a sampling circuit with given PI and PO number.
+  2. **sampleCnt \[-i \<num>] \[-cvh]**  
+    Generate a sampling circuit with given PI number and connect it to the current network.
+    \[-c] option make the circuit size smaller after connection in our experiments
+  3. **sampleWit \[-s \<num>] \[-vh]**  
+    Generate witnesses of the current network and dump the sampling circuits named by "wit<num>.aig".
 
-- **SampleCircuit.h/cpp**  
-  C++ interface  
+- **Interface**    
   1. **Constructor**  
     can initialize the number of PI/PO here
   2. **void setIOnum(int nPI, int nPO)**  
