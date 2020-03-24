@@ -227,7 +227,7 @@ void Extra_StopManager( DdManager * dd )
     RetValue = Cudd_CheckZeroRef( dd );
     if ( RetValue > 10 )
 //    if ( RetValue )
-        printf( "\nThe number of referenced nodes = %d\n\n", RetValue );
+        //printf( "\nThe number of referenced nodes = %d\n\n", RetValue );
 //  Cudd_PrintInfo( dd, stdout );
     Cudd_Quit( dd );
 }
