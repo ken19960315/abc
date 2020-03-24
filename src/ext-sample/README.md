@@ -10,17 +10,18 @@ A sampling circuit generator package embedded in [abc](https://github.com/berkel
 2. type "make" command at the root directory of abc
 
 # Documentation
-- **Commands Usage** 
+- **Commands Usage**  \\
   \[-h] option shows the detailed usage of each command
   1. **sampleCkt \[-i \<num>] \[-o \<num> / -c] \[-vh]**  
     Generate a sampling circuit with given PI and PO number.
   2. **sampleCnt \[-i \<num>] \[-cvh]**  
-    Generate a sampling circuit with given PI number and connect it to the current network.
-    \[-c] option make the circuit size smaller after connection in our experiments
+    Generate a sampling circuit with given PI number and connect it to the current network. \\
+    \[-c] option make the circuit size smaller after connection in our experiments.
   3. **sampleWit \[-s \<num>] \[-vh]**  
     Generate witnesses of the current network and dump the sampling circuits named by "wit<num>.aig".
 
 - **Interface**    
+  SamplingCircuit.h
   1. **Constructor**  
     can initialize the number of PI/PO here
   2. **void setIOnum(int nPI, int nPO)**  
